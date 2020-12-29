@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bigsteps">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <supports-screens
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true"
+        android:xlargeScreens="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBjxLdzIqXE8tlxqxi2KuIPXGaEhjTh9_I"/>
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".test_10_min"
+            android:label="TEST"/>
+        <activity android:name="PermissionsActivity"
+            android:label="PERMISSION"/>
+        <activity
+        android:name=".test"
+        android:parentActivityName=".MainActivity"
+            android:label="TEST"/>
+        <activity
+            android:name=".checklist"
+            android:parentActivityName=".MainActivity"
+            android:label="CHECKLIST"/>
+        <activity
+            android:name=".totalsteps"
+            android:parentActivityName=".MainActivity"
+            android:label="TOTAL STEPS"/>
+        <activity
+            android:name=".map"
+            android:parentActivityName=".MainActivity"
+            android:label="MAP"/>
+        <activity android:name=".MainActivity"
+            android:label="HOME"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
